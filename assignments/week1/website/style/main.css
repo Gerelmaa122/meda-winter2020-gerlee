@@ -1,14 +1,14 @@
 body{
-    background-color:white;
+    background-color:gray;
 }
 header,main,footer{
-    background-color:pink;
+    background-color:white;
     width:700px;
     margin: 0 auto;
    
 }
 header{
-    height:200px;
+ 
     position:relative;
 
 }
@@ -52,7 +52,24 @@ left:2px;
 main{
     height:500px;
 }
-footer{
-    height:100px;
-    
+footer {
+    text-align:center;
+}
+footer p#copy-notice{
+    text-align:center;
+    font-size:12px;
+    font-family:'Zilla Slab',serif;
+    color:blue;
+    margin:12px 0;
+}
+main div#first-column,main div#
+main div#first-column{
+    background-color:aqua;
+    width:467px;
+  
+}
+main div#second-column{
+    background-color:green;
+    width:233px;
+   
 }
