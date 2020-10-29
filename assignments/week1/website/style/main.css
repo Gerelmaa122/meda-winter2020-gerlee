@@ -1,75 +1,151 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap');
+
+body {
     background-color:gray;
 }
-header,main,footer{
-    background-color:white;
-    width:700px;
+
+header, main, footer {
+    background-color: white;
+    width: 700px;
     margin: 0 auto;
-   
 }
-header{
- 
-    position:relative;
 
+header {
+    position: relative;
 }
-nav{
 
-    width:350px;
-    position:absolute;
-    right:0;
-    top:75px;
-    text-align:right;
-    
+nav {
+    width: 350px;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    text-align: right;
 }
-nav ul{
-    padding-right:10px;
+
+nav ul {
+    padding-right: 10px;
 }
+
 nav ul li {
-    display:inline-block;
-    margin:10px;
-    font-family:'Zilla Slab',serif;
-    font-size:24px;
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Zilla Slab', serif;
+    font-size: 24px;
+}
 
-}
 nav ul li a {
-text-decoration:none;
+    text-decoration: none;
 }
-nav ul li a:link{
-    color:darkmagenta;
+
+nav ul li a:link {
+    color: grey;
 }
 
 nav ul li a:visited {
-    color: green;
+    color:blueviolet;
 }
+
 nav ul li a:hover {
     color:blue;
 }
+
 nav ul li a:active {
-position: relative;
-top:2px;
-left:2px;
+    position: relative;
+    top: 2px;
+    left: 2px;
 }
-main{
-    height:500px;
+
+main {
+    height: 500px;
 }
-footer {
-    text-align:center;
+
+footer p#copy-notice {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Zilla Slab', serif;
+    color: #f70fa9;
+    padding: 12px 0;
 }
-footer p#copy-notice{
-    text-align:center;
-    font-size:12px;
-    font-family:'Zilla Slab',serif;
-    color:blue;
-    margin:12px 0;
-}
-main div#first-column,main div#
-main div#first-column{
-    background-color:aqua;
-    width:467px;
-  
-}
-main div#second-column{
-    background-color:green;
-    width:233px;
+
+/* Contact Page */
+
+main div#first-column, main div#second-column {
+    height: 500px;
    
+}
+
+main div#first-column {
+   width: 467px;
+}
+
+main div#first-column form label {
+    font-family:'Zilla Slab',serif;
+    padding:18px;
+  
+
+}
+main div#first-column form input,main div#first-column{
+    display:inline-block;
+    margin-left:18px;
+    font-size:24px;
+    padding:6px;
+    font-family:'Zilaa Slab',serif;
+    border-width:0;
+    border-color:black;
+    background-color:white;
+    border-radius:6px;
+   
+}
+main div#first-column form textarea{
+    vertical-align:top;
+    display:inlne-block;
+    
+}
+main div#second-column {
+    vertical-align:top;
+    background-color: lightcyan;
+    width: 233px;
+    height:300px;
+}
+
+main#services-page table{
+    border:1px solid pink;
+    width:100%;
+
+}
+main#services-pages table td,main#services-page table th{
+    border:dashed gray 1px;
+}
+main#services-page table thead{
+    background-color:lightskyblue;
+
+}
+main#services-page table thead th{
+    padding:6px;
+    font-family:'Zilla Slab',serif;
+    color:white;
+    text-transform:uppercase;
+}
+main#services-page table tbody td{
+    font-family:'Zilla Slab',serif;
+    text-align:right;
+    padding:6px;
+    
+}
+main id#second-column {
+    width:300px;
+   
+}
+main id#second-column p{
+    padding:6px;
+    font-family:'Zilla Slab',serif;
+    font-size:18px;
+    color:gray;
+
+}
+main div#second-column h2{
+    padding:6px;
+    color:pink;
+    font-family:'Zilla Slab',serif;
+    font-size:18px;
 }

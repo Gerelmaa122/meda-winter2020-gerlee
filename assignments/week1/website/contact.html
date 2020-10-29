@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Homepage</title>
-<link rel="stylesheet" href="style/reset.css"/>
-<link rel="stylesheet" href="style/main.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
 
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
+
     <header>
-        <img src="images/111.jpeg" width="150" height="100"  alt="Website Logo"/>
+        <img src="images/111.jpeg"width="226" height="150" alt="Website Logo" />
+
         <nav>
-        <ul>
-            <li><a href="index.html">Home</li>
-            <li><a href="services.html"></a>Services</li>
-            <li><a href="contact.html"></a>Contact</li>
-</ul>
-</nav>
-</header>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main id="contact-page">
         <div id="first-column">
-            </div>
-            <div id="second-column">
-                </div>
+<form>
+    <label for="fname">Forst Name</label><br/>
+    <input type="text" id="Firstname"/><br/>
+    <label for="email">Email</label><br/>
+    <input type="text" id="email"/><br/>
+    <label for="subject">Subject</label><br/>
+    <input type="text" id="subject"/><br/>
+    <label for="messages">Message</label><br/>
+    <textarea id="message"></textarea><br/>
+    <input type="reset"/>
+    <input type="submit"/>
+
+    </form>
+        </div><div id="second-column">
+            <h2>Address</h2>
+            <p>3456 street,Sanfrancisco Ca94110</p>
+<h2>Phone Number</h2>
+<p><a href="tel:+14158889999">(415)888-99999</a></p>
+<h2>Email</h2>
+<p><a href="email:example@example.com">email:example@example.com</a></p>
+
+        </div>
     </main>
-        <footer>
-            <p id="copy-notice"> Copyright &copy;2020 Gerelmaa Purevtseren</p>
-        </footer>
+
+    <footer>
+        <p id="copy-notice">Copyright &copy; 2020 Gerelmaa Purevtseren</p>
+    </footer>
+    
 </body>
 </html>
-
