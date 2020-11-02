@@ -109,3 +109,33 @@ parseFloat("100.100") // Becomes 100.1
 january.toString(); // Takes number from variable or property and converts to a string.
 
 // myArray.toString();
+
+let myArray=[1,2,3,4];
+myArray[3];
+myArray[0]=100;
+myArray[17]=9;
+console.log(myArray.length);
+myArray[10]=()=>{console.log("bye")};
+//add to end begining need a value in arguments.
+myArray.push();
+myArray.unshift();
+//remove to end and beginning
+myArray.pop();
+myArray.shift();
+
+let myObject={
+    firstNum:1,
+    secondNum:2,
+    thirdNum:3,
+    forthNum:4,
+
+};
+myObject.firstNum;
+myObject["second Num"];
+myObject.thirdNum="three";
+let myAssignedFunc=function(){};
+
+let myObjectwithFunc={
+    funcName:() =>{console.log("hello my friend")}
+};
+
