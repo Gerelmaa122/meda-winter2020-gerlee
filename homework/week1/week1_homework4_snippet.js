@@ -7,7 +7,7 @@ function myFunction(option, option2) {
     //after show us product result of variable
     console.log(product);
 
-    //show us the string of option parameter, the value of the option entered in
+    //show us the string of option parameter, the value of the option entered in also returning the value
     console.log("The value of the option parameter is " + option);
 
     //Using if statement if option equal to 0  if statement is true return the result
