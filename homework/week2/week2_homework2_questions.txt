@@ -1,0 +1,27 @@
+1. Why are you taking the back-end class? What are your current expectations of the back-end class?
+ Because I would like to change my career and also improve my knowledge and learn more about web design also coding .
+
+2. Before front-end class, did you have coding experience? What computer language(s) and how long ago?
+I do have experience but in the back country which is Mongolia over 10 years ago .I did use Dot net also ,MS-SQl .
+
+3. What front-end topics did you find difficult or what did you struggle with?
+Learning new things is never easy for everybody also for me too, i forget about a lot of things because it's been over 10 years ago i learned some things but nowadays it's not used anymore which is shocking to me .For example:
+HTML language <center>,<table>... a lot of things not used anymore which is sad. 
+
+4. Did the front-end class meet your expectations? Explain how it did or did not.
+Oh of course i do love it that's why, I'm taking back-end class also i'm so happy to get in the class and learn new things everyday.
+
+5. Are you switching careers or looking to add skills to your resume? Why?
+I guess I did it or what should i say because i do have a bachelor degree of software engineering but i didn't work my major job over 10 years i forget everything basically i go back my path .If it's pandemic never happened, I didn't think to study or find a major job. I might still work in a restaurant .Pandemic happened. It opened my eyes.
+
+6. What books or other resources are you depending on outside of class to enhance your learning?
+During the pandemic i took class in udemy learn AWS but i didn't finish yet also i studied how to make a mobile game using xcode and sales force's trailhead and hack reactor's self free learn javascript after my thought i didn't fully finish everything that's my problem but i will finish  it in the future.
+
+7. Other than HTML, CSS, and JavaScript, what other computer languages are you currently learning or are interested in learning? Why?
+X code because i do love to play puzzles on my phone that's why i am trying to make puzzles but it's not finished yet maybe i will finish before new year and maybe apple store who knows.
+
+8. Where do you see the industry going in the future?
+Information technology developing every single day also programs and languages updates every 3 or 6 months that's we can see how fast is it also in the future we have to learn machine language because so we can see some self drive car and robots ...etc
+
+9. After taking the back-end class do you plan or have already planned on continuing your learning in tech? What specifically do you plan on focusing?
+Yes after back-end class if I can't find a major job I will study hack reactor and improve my knowledge. I don't give up because I know after how it goes. If I silver, if somebody polish me every day I will shine one day .
