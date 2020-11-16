@@ -1,92 +1,51 @@
 const fs = require("fs");
 
-const timeNow = new Date(Date.now());
-
-
+const fileExists = fs.existsSync("story.json");
 let arguments = process.argv;
 
+let contents;
 
-let story;
-
-
-if (fs.existsSync("story.json",)) {
-  
-    story = fs.readFileSync("story.json","utf-8");
+if (fileExists) {
+    contents = fs.readFileSync("story.json", "utf-8");
 } else {
-    
-   fs.writeFileSync("story.json", "[]", "utf-8");
-    story = "";
-}
-
-console.log(arguments);
-
-let fileName = arguments[1];
-
-
-
-const fileExists = fs.existsSync(fileName);
-
-if (fileExists === false) {
-    console.log("We can't find your information please check one more time");
+    console.log("We can't find your result please try again!");
     return;
 }
 
-let fileContents = fs.readFileSync(fileName, "utf-8");
+let contentsObject = JSON.parse(contents);
+
+console.log(typeof contents);
+console.log(typeof contentsObject);
+
+const myObject = {
+    "firstName": "Gerlee",
+    "ability": function () {
+      
+        console.log(this.firstName + " choosing menu options.");
+    },
+    menu: ["food", "drink", "sushi"],
+    deceased: false,
+    age: 22,
+    "i like to eat": false,
+    lastUpdate: "11/15/2020",
+    lastUpdateObject: new Date(Date.now())
+};
 
 
+let jsonObjectConverted = JSON.stringify(myObject);
 
-let contentArray = fileContents.split("");
+console.log(jsonObjectConverted);
 
+fs.writeFileSync("food.json", jsonObjectConverted, "utf-8");
 
+myObject.ability();
 
-let letterCount = 0;
+myObject.age;
+myObject["i like it "];
 
-for (let i = 0; i < contentArray.length; i++) {
+let parsedStringifiedJSON = fs.readFileSync("food.json", "utf-8");
 
-    if (contentArray[i] === " " || contentArray[i] === "," || contentArray[i] === "." || contentArray[i] === "?" || contentArray[i] === "!") {
-        continue;
-    } else {
-        letterCount++;
-    }
+parsedStringifiedJSON = JSON.parse(parsedStringifiedJSON);
 
-}
-
-let firstSentence = `The file ${fileName} contains a total of ${letterCount} letters.`;
-
-console.log(firstSentence);
-
-story = `${story}${fileName} ${timeNow.toDateString()} ${timeNow.toTimeString()}\n\n`;
-
-
-story += firstSentence;
-
-let wordArray = fileContents.split(" ");
-
-let secondSentence = `It has a total of ${wordArray.length} words in it.`;
-
-console.log(secondSentence);
-
-story = story + "\n" + secondSentence;
-
-
-
-let sentenceCount = 0;
-
-for (let i = 0; i < contentArray.length; i++) {
-    if (contentArray[i] === "." || contentArray[i] === "!" || contentArray[i] === "?") {
-
-        
-        sentenceCount++;
-    }
-}
-
-let thirdSentence = `It has a total of ${sentenceCount} sentences in it.`;
-console.log(thirdSentence);
-
-story = story + "\n" + thirdSentence + "\n\n";
-
-console.log("");
-console.log("We counted all your words and sentences story!")
-fs.writeFileSync("story.json", story, "utf-8");
-
-
+console.log(myObject);
+console.log(parsedStringifiedJSON);
