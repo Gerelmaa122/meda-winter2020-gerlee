@@ -3,19 +3,19 @@ const fs = require("fs");
 const fileExists = fs.existsSync("story.json");
 let arguments = process.argv;
 
-let contents;
+let apple;
 
 if (fileExists) {
-    contents = fs.readFileSync("story.json", "utf-8");
+    apple = fs.readFileSync("story.json", "utf-8");
 } else {
     console.log("We can't find your result please try again!");
     return;
 }
 
-let contentsObject = JSON.parse(contents);
+let appleObject = JSON.parse(apple);
 
-console.log(typeof contents);
-console.log(typeof contentsObject);
+console.log(typeof apple);
+console.log(typeof appleObject);
 
 const myObject = {
     "firstName": "Gerlee",
@@ -23,10 +23,10 @@ const myObject = {
       
         console.log(this.firstName + " choosing menu options.");
     },
-    menu: ["food", "drink", "sushi"],
+    Message: ["Hello dear how are you!"],
     deceased: false,
     age: 22,
-    "i like to eat": false,
+    "Nice to meet you": false,
     lastUpdate: "11/15/2020",
     lastUpdateObject: new Date(Date.now())
 };
@@ -36,14 +36,14 @@ let jsonObjectConverted = JSON.stringify(myObject);
 
 console.log(jsonObjectConverted);
 
-fs.writeFileSync("food.json", jsonObjectConverted, "utf-8");
+fs.writeFileSync("greetings.json", jsonObjectConverted, "utf-8");
 
 myObject.ability();
 
 myObject.age;
-myObject["i like it "];
+myObject["See you next time"];
 
-let parsedStringifiedJSON = fs.readFileSync("food.json", "utf-8");
+let parsedStringifiedJSON = fs.readFileSync("greetings.json", "utf-8");
 
 parsedStringifiedJSON = JSON.parse(parsedStringifiedJSON);
 
