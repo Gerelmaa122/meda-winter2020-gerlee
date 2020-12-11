@@ -1,64 +1,85 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
 
+const arguments = process.argv;
+
+// The URL that we use to connect to MongoDB Atlas.
 const db="mongodb+srv://Gerlee:Ruby0621@cluster0.qwchk.mongodb.net/first_data?retryWrites=true&w=majority";
-mongoose.connect(db,{useNewUrlParser:true,useFindAndModify:false,useUnifiedTopology:true},(error)=>{
-    if(error){
-        console.log("There is an error!",error);
+// Options for Mongoose current connection.
+const options = {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true};
 
-    }else {
-        console.log("Successfully connected to MongoDB Database first_data.");
+// We use connect to actually connect to the database. The connect method needs three arguments, URL, options, and callback.
+let connection = mongoose.connect(db, options, (error) => {
+    
+    // Check if MongoDB gave us an error.
+    if (error) {
+        // If so, console log the error.
+        console.log("There was an error!", error);
+    } else {
+        // If not, say successfully connected to database.
+        console.log("Successfully connected to MongoDB Database genericDatabase.");
     }
+
 });
+
+//Grab a copy of what a "Schema" is from the mongoose package.
 let Schema = mongoose.Schema;
-let exampleSchema=new Schema({
-    username:String,
-    password:String,
-    created:String,
-    age:Number,
-    accountClosed:Boolean
 
+// Customize our Schema so mongoose knows how the document should be "formatted".
+let exampleSchema = new Schema({
+    username: String,
+    password: String,
+    created: String,
+    age: Number,
+    accountClosed: Boolean
 });
-let exampleModel=new mongoose.model("first_info",exampleSchema);
 
-let exampleDocuments=new exampleModel({
-    username:"Gerlee",
-    password:"12345",
-    created:"Dec 02,2020",
-    age:25,
-    accountClosed:false
+// Create the model for mongoose, we look for a specific collection, and we are going to work with a specific schema.
+let exampleModel = new mongoose.model("firstcollections", exampleSchema);
 
+// Create a new document and fill it with data. Must match how we designed our schema.
+let exampleDocument = new exampleModel({
+    username: arguments[2],
+    password: arguments[3],
+    created: Date.now(),
+    age: arguments[4],
+    accountClosed: false
 });
-//Create 
-exampleDocuments.save((error)=> {
 
-if (error) {
-    console.log(error);
-} else {
-    console.log("Document saved");
+// CREATE
+// callback will run when we get a message from MongoDB.
+exampleDocument.save((error) => {
 
-}
-
-mongoose.connection.close();
-console.log("connection closed");
-});
-let seondDocuments=new exampleModel({
-    username:"Ruby",
-    created:"12/3/2020",
-    age:20,
-    accountClosed:true,
-    nickname:"Sisi"
-});
-secondDocument.save((error)=>{
-    if(error){
+    // We check if we got an error or not and console log accordingly.
+    if (error) {
         console.log(error);
-
-    }else{
-        console.log("saved");
-
+        
+    } else {
+       console.log("Document saved!"); 
     }
+
+    // Once we saved this document, we have the option of closing the connection so we can end this script.
+    //mongoose.connection.close();
+    
 });
+
+// let secondDocument = new exampleModel({
+//     username: "Raissa",
+//     created: "Dec 4, 2020",
+//     age: 24,
+//     accountClosed: true,
+//     nickname: "Ray"
+// });
+
+// secondDocument.save((error) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log("saved!");
+//     }
+// });
+
+
 setTimeout(() => {
     mongoose.connection.close();
-    console.log("connection closed");
-
-},5000); 
+    console.log("connection closed!");
+}, 5000);

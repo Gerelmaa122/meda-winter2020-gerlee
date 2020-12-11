@@ -1,0 +1,44 @@
+hello how are you doing?
+atop note should have the following information:
+title
+note text
+completes status
+priority level
+categories(future feature)
+timestamp
+
+
+
+Front-end request object:
+{
+author:Null
+title:String
+completed:Boolean
+Archived:Boolean
+Priority:Number
+Categories:Null
+Timestamp:Number(milliseconds from Date Object)
+}
+
+
+
+Back-End response object:
+{
+saved:boolean
+error:String(future feature)
+}
+Front-End request:
+Name:newNote
+Send: Request Object Above
+Return: Response Object Above
+
+
+
+Front-End Request:
+Name:gitList
+Send:{}
+
+Return:{
+List:[....all documents]
+}
+
