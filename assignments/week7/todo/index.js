@@ -56,6 +56,7 @@ app.post("/newNote", (request, response) => {
         
         const responseObject = {
             saved: false,
+            savedTask: newNoteDocument,
             error: null
         };
 
@@ -66,39 +67,40 @@ app.post("/newNote", (request, response) => {
             response.send(responseObject);
         }
     });
-app.post("/getList",(request,response)=>{
-todoModel.find({},(error,result)=>{
-    const responseObject ={
-        list:results,
-        error:null
-    };
-    if (error){
-        console.log("failed to read database.");
+});
 
-    }else {
-        response.send(responseObject);
-
-    }
-
+app.post("/getList", (request, response) => {
+    todoModel.find({}, (error, results) => {
+        
+        const responseObject = {
+            list: results,
+            error: null
+        };
+        
+        if (error) {
+            console.log("failed to read database.");
+        } else {
+            response.send(responseObject);
+        }
     });
 });
-    
-});
 
-app.post("/modify",(req,res)=>{
-   let request=req.body;
-   if(request.action==="delete"){
-       todoModel.findByIdAndDelete(request.id,(error,deleted)=>{
-           if(error){
-               console.log(error);
+app.post("/modify", (req, res) => {
 
-           } else{
-               let response={
-                   copy:deleted
-               }
-               res.send(response);
-           }
-       });
-   }
+    let request = req.body;
+
+    if (request.action === "delete") {
+        todoModel.findByIdAndDelete(request.id, (error, deleted) => {
+            if (error) {
+                console.log(error);
+            } else {
+                let response = {
+                    copy: deleted
+                }
+
+                res.send(response);
+            }
+        });
+    }
 
 });
