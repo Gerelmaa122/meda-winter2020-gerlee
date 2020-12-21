@@ -1,24 +1,56 @@
 body {
-    background-color:lightcyan;
+    background-color:lightgray;
+   
+}
+#new-note{
+    background-repeat:no repeat;
+    background-position:center;
+    background-color:silver;
+    background-size:cover;
+
 }
 
 #loading-icon {
     display: none;
+   
+}
+#new-note{
+    font-family:calibri;
+    font-weight:bold;
+    color:black;
+    font-size:16px;
+
 }
 
 #submit-message {
-    display: none;
+    font-family:myriad pro regular;
+    color:black;
+    font-size:26px;
+    font-weight:100;
+    text-align:center;
 }
 
+
 #loader {
-    height: 26px;
-    width: 26px;
-    display: inline-block;
+    height: 20px;
+    width: 20px;
+
 }
 
 #submit-area {
     height: 26px;
     width: 110px;
-    display: inline-block;
-    vertical-align: top;
+  
+}
+#tasks{
+font-family:calibri;
+font-weight:bold;
+color:black;
+font-size:16px;
+}
+#submit-area{
+    font-family:calibri;
+font-weight:bold;
+color:black;
+font-size:16px;
 }
